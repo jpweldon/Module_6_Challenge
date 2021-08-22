@@ -61,11 +61,11 @@ Clone the Module_6_Challenge repository from GitHub:
 
 'git clone https://github.com/jpweldon/Module_6_Challenge.git'
 
-Create an environment (.env) file with your MAPBOX_API_ACCESS_TOKEN in the same folder as .ipynb.
+Create an environment (.env) file with your MAPBOX_API_ACCESS_TOKEN in the same folder as san_francisco_housing.ipynb.
 
-Run the .ipynb program.
+Run the san_francisco_housing.ipynb program.
 
-Examine the analysis of the housing rental market data for San Francisco inckuding the styled and formatted interactive visualizations.
+Examine the analysis of the housing rental market data for San Francisco including the styled and formatted interactive visualizations.
 
 ---
 
