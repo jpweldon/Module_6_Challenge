@@ -20,13 +20,9 @@ This project leverages python 3.7 with the following modules:
 
 * [os](https://docs.python.org/3/library/os.html) - For providing a portable way of using operating system dependent functionality.
 
-* [datetime](https://docs.python.org/3/library/datetime.html) - For supplying classes for manipulating dates and times.
+* [plotly](https://plotly.com/python/scattermapbox/) - For making scatter plots on Mapbox maps.
 
 * [hvplot](https://hvplot.holoviz.org) - For plotting in various formats working with a wide array of datatypes in the PyData ecosystem.
-
-* [json](https://docs.python.org/3/library/json.html) - For data interchange.
-
-* [requests](https://docs.python-requests.org/en/master/index.html) - For sending HTTP/1.1 requests.
 
 * [pandas](https://github.com/pandas-dev/pandas) - For reading data into a DataFrame and analyzing data via statistics and plots.
 
@@ -50,6 +46,33 @@ Before running the application first install the following dependencies:
   pip install python-dotenv
   pip install mkdocs
 ```
+
+To install PyViz and its dependencies in your Conda dev environment, complete the following steps:
+
+```python
+  conda install -c plotly plotly=4.13.
+  conda install -c pyviz hvplot
+  conda install -c conda-forge nodejs=12
+```
+
+For your PyViz plots to render in JupyterLab, you also need to install a specific version of JupyterLab, as well as the JupyterLab extensions. To install the required JupyterLab version and the extensions for PyViz and Plotly Express, run the following commands in the terminal:
+
+```python
+  conda install -c conda-forge jupyterlab=2
+  jupyter labextension install jupyterlab-plotly@4.13.0 --no-build
+  jupyter labextension install @jupyter-widgets/jupyterlab-manager plotlywidget@4.13.0 --no-build
+  jupyter labextension install @pyviz/jupyterlab_pyviz --no-build
+```
+
+Now that you’ve installed the extensions in your Conda dev environment, you need to apply, or build, them to the JupyterLab software. To do so, run the following code:
+
+```python
+  jupyter lab build
+```
+
+To use the Mapbox API, you need to register for a public Mapbox API access token. You can find detailed instructions on the Plotly Express documentation page:
+
+(https://plotly.com/python/scattermapbox/#mapbox-access-token-and-base-map-configuration)
 
 ---
 
